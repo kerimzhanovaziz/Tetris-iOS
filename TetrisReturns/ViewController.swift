@@ -7,19 +7,20 @@
 //
 
 import UIKit
+import SpriteKit
+import GameplayKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var gameAreaView: GameAreaView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    @IBAction func generateButtonTap(_ sender: UIButton) {
+        let v = self.view as! SKView
+        v.ignoresSiblingOrder = true
+        let scene = GameScene(size: v.bounds.size)
+        scene.scaleMode = .aspectFill
         
-        self.gameAreaView.generateRandomGame()
+        v.presentScene(scene)
     }
 }
 

@@ -45,7 +45,7 @@ class OptionsViewController: UITableViewController, UIPickerViewDelegate, UIPick
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            setupPickerView()
+            
         }
     }
     

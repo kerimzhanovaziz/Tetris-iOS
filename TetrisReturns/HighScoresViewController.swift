@@ -10,18 +10,21 @@ import UIKit
 
 class HighScoresViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var highScores: [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        highScores = DataManager.shared.getHighScores()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return highScores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell", for: indexPath) as! HighScoreTableViewCell
+        cell.highScoreLabel.text = "\(highScores[indexPath.row])"
         return cell
     }
     

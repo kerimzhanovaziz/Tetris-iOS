@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -312,7 +311,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="highScoreCell" rowHeight="100" id="Uk0-GO-u6Y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="highScoreCell" rowHeight="100" id="Uk0-GO-u6Y" customClass="HighScoreTableViewCell" customModule="TetrisReturns" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uk0-GO-u6Y" id="O2T-q6-Lrc">
@@ -358,6 +357,9 @@
                                                 <constraint firstItem="miI-Sf-yxp" firstAttribute="leading" secondItem="HND-2s-Bcc" secondAttribute="trailing" constant="16" id="hhA-yr-Cxu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="highScoreLabel" destination="p3g-fC-uiu" id="leV-Zf-waC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -380,6 +382,24 @@
             <point key="canvasLocation" x="479" y="865"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="g4R-Yi-kCt">
+            <objects>
+                <viewController id="toa-3E-DLe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1cL-br-JST"/>
+                        <viewControllerLayoutGuide type="bottom" id="m3K-ev-ysC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6Z-ip-vHY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.79607843137254897" green="0.31372549019607843" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3g-Hb-pK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="552"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TetrisReturns" customModuleProvider="target" sceneMemberID="viewController">
@@ -387,46 +407,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-n6-SH7" customClass="GameAreaView" customModule="TetrisReturns" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Dco-n6-SH7" secondAttribute="height" multiplier="125:174" id="7xm-tc-p5m"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="columns">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rows">
-                                        <integer key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYx-eH-vEy">
-                                <rect key="frame" x="164" y="629" width="46" height="30"/>
-                                <state key="normal" title="Generate"/>
-                                <connections>
-                                    <action selector="generateButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MN3-wP-P7c"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Dco-n6-SH7" secondAttribute="trailing" id="Kfk-0k-gDu"/>
-                            <constraint firstItem="Dco-n6-SH7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LQi-iG-2BO"/>
-                            <constraint firstItem="Dco-n6-SH7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PYt-1w-0zo"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BYx-eH-vEy" secondAttribute="bottom" constant="8" id="oxt-yV-QN6"/>
-                            <constraint firstItem="BYx-eH-vEy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xaW-AO-YAa"/>
-                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="gameAreaView" destination="Dco-n6-SH7" id="OWN-zy-QnT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

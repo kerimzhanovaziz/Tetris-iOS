@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "TETRIS"
+        
     }
     
     @IBAction func startGame(_ sender: UIButton) {
