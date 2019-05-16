@@ -14,6 +14,12 @@
 		5F3D1B7F228ABC89009B51EF /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D1B7E228ABC83009B51EF /* RobotoSlab-Regular.ttf */; };
 		5F3D1B81228ADCC8009B51EF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D1B80228ADCC8009B51EF /* DataManager.swift */; };
 		5F3D1B83228ADFBC009B51EF /* HighScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D1B82228ADFBC009B51EF /* HighScoreTableViewCell.swift */; };
+		5F721FEB228D8ECB00F8B911 /* rotate.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FE6228D8ECA00F8B911 /* rotate.wav */; };
+		5F721FEC228D8ECB00F8B911 /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FE7228D8ECA00F8B911 /* move.wav */; };
+		5F721FED228D8ECB00F8B911 /* clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FE8228D8ECA00F8B911 /* clear.wav */; };
+		5F721FEE228D8ECB00F8B911 /* land.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FE9228D8ECA00F8B911 /* land.wav */; };
+		5F721FEF228D8ECB00F8B911 /* over.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FEA228D8ECB00F8B911 /* over.wav */; };
+		5F721FF1228D9AD300F8B911 /* POL-net-bots-short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F721FF0228D9AD300F8B911 /* POL-net-bots-short.wav */; };
 		5FFA1535227C17AC0062FCAA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA1534227C17AC0062FCAA /* MenuViewController.swift */; };
 		5FFA1537227C1B260062FCAA /* HighScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA1536227C1B260062FCAA /* HighScoresViewController.swift */; };
 		5FFA153B227C231C0062FCAA /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA153A227C231C0062FCAA /* OptionsViewController.swift */; };
@@ -33,6 +39,12 @@
 		5F3D1B7E228ABC83009B51EF /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		5F3D1B80228ADCC8009B51EF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5F3D1B82228ADFBC009B51EF /* HighScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewCell.swift; sourceTree = "<group>"; };
+		5F721FE6228D8ECA00F8B911 /* rotate.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rotate.wav; sourceTree = "<group>"; };
+		5F721FE7228D8ECA00F8B911 /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
+		5F721FE8228D8ECA00F8B911 /* clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clear.wav; sourceTree = "<group>"; };
+		5F721FE9228D8ECA00F8B911 /* land.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = land.wav; sourceTree = "<group>"; };
+		5F721FEA228D8ECB00F8B911 /* over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = over.wav; sourceTree = "<group>"; };
+		5F721FF0228D9AD300F8B911 /* POL-net-bots-short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "POL-net-bots-short.wav"; sourceTree = "<group>"; };
 		5FFA1534227C17AC0062FCAA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5FFA1536227C1B260062FCAA /* HighScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresViewController.swift; sourceTree = "<group>"; };
 		5FFA153A227C231C0062FCAA /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,12 @@
 		A8AAB34322587DB60024BEB6 /* TetrisReturns */ = {
 			isa = PBXGroup;
 			children = (
+				5F721FE8228D8ECA00F8B911 /* clear.wav */,
+				5F721FE9228D8ECA00F8B911 /* land.wav */,
+				5F721FE7228D8ECA00F8B911 /* move.wav */,
+				5F721FF0228D9AD300F8B911 /* POL-net-bots-short.wav */,
+				5F721FEA228D8ECB00F8B911 /* over.wav */,
+				5F721FE6228D8ECA00F8B911 /* rotate.wav */,
 				5F3D1B7E228ABC83009B51EF /* RobotoSlab-Regular.ttf */,
 				A8AAB34422587DB60024BEB6 /* AppDelegate.swift */,
 				A8AAB34622587DB60024BEB6 /* ViewController.swift */,
@@ -157,8 +175,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F721FED228D8ECB00F8B911 /* clear.wav in Resources */,
+				5F721FEB228D8ECB00F8B911 /* rotate.wav in Resources */,
 				5F3D1B7F228ABC89009B51EF /* RobotoSlab-Regular.ttf in Resources */,
+				5F721FEE228D8ECB00F8B911 /* land.wav in Resources */,
 				A8AAB34F22587DB60024BEB6 /* LaunchScreen.storyboard in Resources */,
+				5F721FF1228D9AD300F8B911 /* POL-net-bots-short.wav in Resources */,
+				5F721FEC228D8ECB00F8B911 /* move.wav in Resources */,
+				5F721FEF228D8ECB00F8B911 /* over.wav in Resources */,
 				A8AAB34C22587DB60024BEB6 /* Assets.xcassets in Resources */,
 				A8AAB34A22587DB60024BEB6 /* Main.storyboard in Resources */,
 			);

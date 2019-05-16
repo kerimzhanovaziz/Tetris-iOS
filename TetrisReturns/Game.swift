@@ -120,7 +120,7 @@ class BlockPatch {
                 let x = CGFloat(j) * (blockSize + gap)
                 row.append(CGPoint(x: x, y: y))
             }
-            positions.append(row)
+                positions.append(row)
         }
         self.positions = positions
         let width = CGFloat(cols) * blockSize + CGFloat(cols - 1) * gap
@@ -200,7 +200,7 @@ class PlayArea: SKSpriteNode {
         // battle field
         let field = BattleField()
         field.setup(scene: gameScene, patch: patch, resetPlayAreaAction: SKAction.run {
-            self.isUserInteractionEnabled = true
+           // self.isUserInfuncteractionEnabled = true
             self.messagePanel.isHidden = false
             self.messagePanel.showGoMax()
             self.field.isHidden = true

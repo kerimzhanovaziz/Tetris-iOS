@@ -11,6 +11,7 @@ import UIKit
 class HighScoresViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var highScores: [Int] = []
+    var names = ["John" , "Aziz" , "Doni" , "Maka"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class HighScoresViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "highScoreCell", for: indexPath) as! HighScoreTableViewCell
         cell.highScoreLabel.text = "\(highScores[indexPath.row])"
+        cell.namesLabel.text = names[Int(arc4random_uniform(UInt32(names.count - 1)))]
         return cell
     }
     

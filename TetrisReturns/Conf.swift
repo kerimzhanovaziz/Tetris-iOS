@@ -34,8 +34,8 @@ class Conf {
     
     static let playAreaWidthScale = CGFloat(0.6)
     static let playAreaBorderM    = CGFloat(1)
-    static let playAreaBlockCols  = 16
-    static let playAreaBlockRows  = 24
+    static let playAreaBlockCols  = 12
+    static let playAreaBlockRows  = 22
     //static func getPlayAreaWidthM(cols: Int) -> CGFloat {
     //    return 2 * playAreaBorderM + CGFloat(cols) * (blockM + blockGapM) + blockGapM
     //}

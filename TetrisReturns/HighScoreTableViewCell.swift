@@ -10,6 +10,7 @@ import UIKit
 
 class HighScoreTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var namesLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
     
     override func awakeFromNib() {

@@ -28,6 +28,7 @@ class GameScene: SKScene {
     var ctrlArea: ControlArea!
     var infoArea: InfoArea!
     var gameData = GameData()
+    var mainView = UIView()
     
     override func didMove(to view: SKView) {
         
@@ -125,12 +126,47 @@ class GameScene: SKScene {
     }
     
     func showGameOver() {
-        let view = UIView(frame: CGRect(x: (self.view?.frame.width)! / 2, y: (self.view?.frame.height)! / 2, width: 200, height: 200))
-        view.layer.backgroundColor = UIColor.white.cgColor
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        label.text = "SHAVUXA BLYAD"
-        view.addSubview(label)
-        self.view?.addSubview(view)
+        mainView = UIView(frame: CGRect(x: 0, y: 0, width: (self.view?.frame.width)!, height: (self.view?.frame.height)!))
+        mainView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        let insideView = UIView(frame: CGRect(x: (mainView.frame.width - (mainView.frame.width - 128)) / 2, y: (mainView.frame.height - (mainView.frame.height - 256)) / 2, width: (mainView.frame.width - 128), height: (mainView.frame.height - 256)))
+        insideView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        let resumeButton = UIButton(frame: CGRect(x: 0, y: 0, width: insideView.frame.width, height: insideView.frame.height / 2))
+        resumeButton.backgroundColor = .white
+        resumeButton.addTarget(self, action: #selector(resumeButtonClicked), for: .touchUpInside)
+        resumeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        resumeButton.setTitle("RESUME", for: .normal)
+        resumeButton.setTitleColor(.black, for: .normal)
+        
+        let quitButton = UIButton(frame: CGRect(x: 0, y: insideView.frame.height / 2 + 1, width: insideView.frame.width, height: insideView.frame.height / 2))
+        quitButton.backgroundColor = .white
+        quitButton.addTarget(self, action: #selector(quitButtonClicked), for: .touchUpInside)
+        quitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        quitButton.setTitle("QUIT", for: .normal)
+        quitButton.setTitleColor(.black, for: .normal)
+        
+        insideView.addSubview(resumeButton)
+        insideView.addSubview(quitButton)
+        
+        mainView.addSubview(insideView)
+        self.view?.addSubview(mainView)
+    }
+    
+    @objc private func resumeButtonClicked() {
+        unpauseGame()
+        mainView.removeFromSuperview()
+    }
+    
+    @objc private func quitButtonClicked() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "main")
+        vc.view.frame = (self.view?.frame)!
+        vc.view.layoutIfNeeded()
+       
+        UIView.transition(with: self.view!, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.view?.window?.rootViewController = vc
+        }, completion: { completed in
+        })
     }
     
     func newGame() {

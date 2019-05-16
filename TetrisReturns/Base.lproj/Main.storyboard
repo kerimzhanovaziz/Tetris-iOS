@@ -318,7 +318,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HND-2s-Bcc">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avata" translatesAutoresizingMaskIntoConstraints="NO" id="HND-2s-Bcc">
                                                     <rect key="frame" x="16" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="sDL-E6-BI8"/>
@@ -359,6 +359,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="highScoreLabel" destination="p3g-fC-uiu" id="leV-Zf-waC"/>
+                                            <outlet property="namesLabel" destination="miI-Sf-yxp" id="4YS-rJ-cad"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -384,7 +385,7 @@
         <!--View Controller-->
         <scene sceneID="g4R-Yi-kCt">
             <objects>
-                <viewController id="toa-3E-DLe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="q" id="toa-3E-DLe" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1cL-br-JST"/>
                         <viewControllerLayoutGuide type="bottom" id="m3K-ev-ysC"/>
@@ -421,7 +422,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uqn-9v-VbS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aFz-BT-DAV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="main" automaticallyAdjustsScrollViewInsets="NO" id="aFz-BT-DAV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1AA-7m-py1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -437,4 +438,7 @@
             <point key="canvasLocation" x="-964" y="145"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avata" width="256" height="256"/>
+    </resources>
 </document>

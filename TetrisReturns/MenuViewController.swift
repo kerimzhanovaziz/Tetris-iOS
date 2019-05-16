@@ -32,4 +32,9 @@ class MenuViewController: UIViewController {
     @IBAction func highScore(_ sender: UIButton) {
         
     }
+    @IBAction func exit(_ sender: UIButton) {
+
+  }
+    
+    
 }
